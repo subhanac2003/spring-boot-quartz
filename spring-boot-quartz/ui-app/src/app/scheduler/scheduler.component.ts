@@ -5,9 +5,10 @@ import {SchedulerService} from './scheduler.service';
 import {ServerResponseCode} from './response.code.constants';
 import {Observable, Subscription} from 'rxjs/Rx';
 
+
 @Component({
     template: require('./scheduler.component.html'),
-    styles: [' select{padding: 7px; display: inline-block; /* font-weight: 400; */ color: #fff !important; background-color: #337ab7 !important; border-color: #337ab7; /* color: #212529; */ text-align: center; vertical-align: middle; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; background-color: transparent; border: 1px solid transparent; /* padding: .375rem .75rem; */ /* font-size: 1rem; */ line-height: 1.5; border-radius: 7px; transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out; }']
+    styles: ['.navbar-default a { color: white !important; }  select{padding: 7px; display: inline-block; /* font-weight: 400; */ color: #fff !important; background-color: #337ab7 !important; border-color: #337ab7; /* color: #212529; */ text-align: center; vertical-align: middle; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; background-color: transparent; border: 1px solid transparent; /* padding: .375rem .75rem; */ /* font-size: 1rem; */ line-height: 1.5; border-radius: 7px; transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out; }'],
 })
 
 export class SchedulerComponent implements OnInit, OnDestroy {
@@ -22,6 +23,55 @@ export class SchedulerComponent implements OnInit, OnDestroy {
     defaultInstance: any = 'EC2';
     filteredInstances = [];
     isEditMode: boolean = false;
+    staticDataTimeZone: any =
+        {
+            "IST": [
+                {
+                    "title": "",
+                    "date": "",
+                },
+                {
+                    "title": "New Year’s Day",
+                    "date": "2019-01-02"
+                },
+                {
+                    "title": "Coonation",
+                    "date": "2019-01-02"
+                }
+            ],
+
+            "EST": [
+                {
+                    "title": "",
+                    "date": "",
+                },
+                {
+                    "title": "Good Friday",
+                    "date": "2019-04-06"
+                }
+            ],
+            "GMT": [
+                {
+                    "title": "",
+                    "date": "",
+                },
+                {
+                    "title": "Good Friday",
+                    "date": "2019-04-06"
+                }
+            ],
+            "JST": [
+                {
+                    "title": "",
+                    "date": "",
+                },
+                {
+                    "title": "Good DAYY",
+                    "date": "2019-04-06"
+                }
+            ]
+        }
+    holidayList: any;
 
     constructor(private _router: Router,
                 private _fb: FormBuilder,
@@ -30,6 +80,7 @@ export class SchedulerComponent implements OnInit, OnDestroy {
     }
 
     ngOnInit() {
+
         this.jobNameStatus = "";
 
         this.schedulerForm = this._fb.group({
@@ -42,7 +93,8 @@ export class SchedulerComponent implements OnInit, OnDestroy {
             cronExpression: ['0 0/1 * 1/1 * ? *'],
             jobType: [''],
             instanceId: [''],
-            instanceType: ['']
+            instanceType: [''],
+            timezone:['']
         });
         this.schedulerForm.controls['jobType'].setValue(this.default, {onlySelf: true});
         this.schedulerForm.controls['instanceType'].setValue(this.defaultInstance, {onlySelf: true});
@@ -92,7 +144,7 @@ export class SchedulerComponent implements OnInit, OnDestroy {
                 if (success.statusCode == ServerResponseCode.SUCCESS) {
                     this.jobRecords = success.data;
                 } else {
-                    alert("Some error while fetching jobs");
+                    console.log("Some error while fetching jobs");
                 }
 
                 /*
@@ -103,7 +155,7 @@ export class SchedulerComponent implements OnInit, OnDestroy {
                 */
             },
             err => {
-                alert("Error while getting all jobs");
+                console.log("Error while getting all jobs");
             });
     }
 
@@ -124,14 +176,14 @@ export class SchedulerComponent implements OnInit, OnDestroy {
                         this.jobNameStatus = "Available";
                     }
                 } else if (success.statusCode == ServerResponseCode.JOB_NAME_NOT_PRESENT) {
-                    alert("Job name is mandatory.");
+                    console.log("Job name is mandatory.");
                     this.schedulerForm.patchValue({
                         jobName: "",
                     });
                 }
             },
             err => {
-                alert("Error while checkinh job with name exist.");
+                console.log("Error while checkinh job with name exist.");
             });
         this.jobNameStatus = "";
     }
@@ -158,19 +210,19 @@ export class SchedulerComponent implements OnInit, OnDestroy {
         this._schedulerService.scheduleJob(data).subscribe(
             success => {
                 if (success.statusCode == ServerResponseCode.SUCCESS) {
-                    alert("Job scheduled successfully.");
+                    console.log("Job scheduled successfully.");
                     this.resetForm();
 
                 } else if (success.statusCode == ServerResponseCode.JOB_WITH_SAME_NAME_EXIST) {
-                    alert("Job with same name exists, Please choose different name.");
+                    console.log("Job with same name exists, Please choose different name.");
 
                 } else if (success.statusCode == ServerResponseCode.JOB_NAME_NOT_PRESENT) {
-                    alert("Job name is mandatory.");
+                    console.log("Job name is mandatory.");
                 }
                 this.jobRecords = success.data;
             },
             err => {
-                alert("Error while getting all jobs");
+                console.log("Error while getting all jobs");
             });
     }
 
@@ -191,19 +243,19 @@ export class SchedulerComponent implements OnInit, OnDestroy {
         this._schedulerService.updateJob(data).subscribe(
             success => {
                 if (success.statusCode == ServerResponseCode.SUCCESS) {
-                    alert("Job updated successfully.");
+                    console.log("Job updated successfully.");
                     this.resetForm();
 
                 } else if (success.statusCode == ServerResponseCode.JOB_DOESNT_EXIST) {
-                    alert("Job no longer exist.");
+                    console.log("Job no longer exist.");
 
                 } else if (success.statusCode == ServerResponseCode.JOB_NAME_NOT_PRESENT) {
-                    alert("Please provide job name.");
+                    console.log("Please provide job name.");
                 }
                 this.jobRecords = success.data;
             },
             err => {
-                alert("Error while updating job");
+                console.log("Error while updating job");
             });
     }
 
@@ -234,17 +286,17 @@ export class SchedulerComponent implements OnInit, OnDestroy {
         this._schedulerService.pauseJob(data).subscribe(
             success => {
                 if (success.statusCode == ServerResponseCode.SUCCESS && success.data == true) {
-                    alert("Job paused successfully.")
+                    console.log("Job paused successfully.")
 
                 } else if (success.data == false) {
                     if (success.statusCode == ServerResponseCode.JOB_ALREADY_IN_RUNNING_STATE) {
-                        alert("Job already started/completed, so cannot be paused.");
+                        console.log("Job already started/completed, so cannot be paused.");
                     }
                 }
                 this.getJobs();
             },
             err => {
-                alert("Error while pausing job");
+                console.log("Error while pausing job");
             });
 
         //For updating fresh status of all jobs
@@ -258,11 +310,11 @@ export class SchedulerComponent implements OnInit, OnDestroy {
         this._schedulerService.resumeJob(data).subscribe(
             success => {
                 if (success.statusCode == ServerResponseCode.SUCCESS && success.data == true) {
-                    alert("Job resumed successfully.")
+                    console.log("Job resumed successfully.")
 
                 } else if (success.data == false) {
                     if (success.statusCode == ServerResponseCode.JOB_NOT_IN_PAUSED_STATE) {
-                        alert("Job is not in paused state, so cannot be resumed.");
+                        console.log("Job is not in paused state, so cannot be resumed.");
                     }
                 }
 
@@ -270,7 +322,7 @@ export class SchedulerComponent implements OnInit, OnDestroy {
                 this.getJobs();
             },
             err => {
-                alert("Error while resuming job");
+                console.log("Error while resuming job");
             });
 
         //For updating fresh status of all jobs
@@ -284,17 +336,17 @@ export class SchedulerComponent implements OnInit, OnDestroy {
         this._schedulerService.stopJob(data).subscribe(
             success => {
                 if (success.statusCode == ServerResponseCode.SUCCESS && success.data == true) {
-                    alert("Job stopped successfully.")
+                    console.log("Job stopped successfully.")
 
                 } else if (success.data == false) {
                     if (success.statusCode == ServerResponseCode.JOB_NOT_IN_RUNNING_STATE) {
-                        alert("Job not started, so cannot be stopped.");
+                        console.log("Job not started, so cannot be stopped.");
 
                     } else if (success.statusCode == ServerResponseCode.JOB_ALREADY_IN_RUNNING_STATE) {
-                        alert("Job already started.");
+                        console.log("Job already started.");
 
                     } else if (success.statusCode == ServerResponseCode.JOB_DOESNT_EXIST) {
-                        alert("Job no longer exist.");
+                        console.log("Job no longer exist.");
                     }
                 }
 
@@ -302,7 +354,7 @@ export class SchedulerComponent implements OnInit, OnDestroy {
                 this.getJobs();
             },
             err => {
-                alert("Error while pausing job");
+                console.log("Error while pausing job");
             });
     }
 
@@ -313,17 +365,17 @@ export class SchedulerComponent implements OnInit, OnDestroy {
         this._schedulerService.startJobNow(data).subscribe(
             success => {
                 if (success.statusCode == ServerResponseCode.SUCCESS && success.data == true) {
-                    alert("Job started successfully.")
+                    console.log("Job started successfully.")
 
                 } else if (success.data == false) {
                     if (success.statusCode == ServerResponseCode.ERROR) {
-                        alert("Server error while starting job.");
+                        console.log("Server error while starting job.");
 
                     } else if (success.statusCode == ServerResponseCode.JOB_ALREADY_IN_RUNNING_STATE) {
-                        alert("Job is already started.");
+                        console.log("Job is already started.");
 
                     } else if (success.statusCode == ServerResponseCode.JOB_DOESNT_EXIST) {
-                        alert("Job no longer exist.");
+                        console.log("Job no longer exist.");
                     }
                 }
 
@@ -331,7 +383,7 @@ export class SchedulerComponent implements OnInit, OnDestroy {
                 this.getJobs();
             },
             err => {
-                alert("Error while starting job now.");
+                console.log("Error while starting job now.");
             });
 
         //For updating fresh status of all jobs
@@ -345,14 +397,14 @@ export class SchedulerComponent implements OnInit, OnDestroy {
         this._schedulerService.deleteJob(data).subscribe(
             success => {
                 if (success.statusCode == ServerResponseCode.SUCCESS && success.data == true) {
-                    alert("Job deleted successfully.");
+                    console.log("Job deleted successfully.");
 
                 } else if (success.data == false) {
                     if (success.statusCode == ServerResponseCode.JOB_ALREADY_IN_RUNNING_STATE) {
-                        alert("Job is already started/completed, so cannot be deleted.");
+                        console.log("Job is already started/completed, so cannot be deleted.");
 
                     } else if (success.statusCode == ServerResponseCode.JOB_DOESNT_EXIST) {
-                        alert("Job no longer exist.");
+                        console.log("Job no longer exist.");
                     }
                 }
 
@@ -360,7 +412,7 @@ export class SchedulerComponent implements OnInit, OnDestroy {
                 this.getJobs();
             },
             err => {
-                alert("Error while deleting job");
+                console.log("Error while deleting job");
             });
     }
 
@@ -389,19 +441,50 @@ export class SchedulerComponent implements OnInit, OnDestroy {
                     this.schedulerForm.controls['instanceId'].setValue(success.data[0].instance_id, {onlySelf: true});
 
                 } else {
-                    alert("Some error while fetching instance ids");
+                    console.log("Some error while fetching instance ids");
                 }
             },
             err => {
-                alert("Error while getting all instance ids");
+                console.log("Error while getting all instance ids");
             });
     }
-    
+
     onSelect(instanceType) {
-   // debugger;
-    this.filteredInstances = this.instances
-                 .filter((item)=> item.instance_type == instanceType);
-    this.schedulerForm.controls['instanceId'].setValue(this.filteredInstances[0].instance_id, {onlySelf: true});
-    this.schedulerForm.value.instanceId = this.filteredInstances[0].instance_id;
-  }
+        // debugger;
+        this.filteredInstances = this.instances
+            .filter((item) => item.instance_type == instanceType);
+        this.schedulerForm.controls['instanceId'].setValue(this.filteredInstances[0].instance_id, {onlySelf: true});
+        this.schedulerForm.value.instanceId = this.filteredInstances[0].instance_id;
+    }
+
+    timeZone(zone: any) {
+        switch (zone) {
+            case "IST":
+                this.holidayList = this.staticDataTimeZone.IST;
+                break;
+            case "EST":
+                this.holidayList = this.staticDataTimeZone.EST;
+                break;
+            case "GMT":
+                this.holidayList = this.staticDataTimeZone.GMT;
+                break;
+            case "JST":
+                this.holidayList = this.staticDataTimeZone.JST;
+                break;
+
+
+        }
+    }
+
+
+    holidaySelected(holiday: any) {
+        const getDate = string => (([year, day, month]) => ({day, month, year}))(string.split('-'));
+        let formattedDate = getDate(holiday);
+        this.schedulerForm.controls['year'].setValue(formattedDate.year, {onlySelf: true});
+        this.schedulerForm.controls['month'].setValue(formattedDate.month, {onlySelf: true});
+        this.schedulerForm.controls['day'].setValue(formattedDate.day, {onlySelf: true});
+    }
+
 }
+
+

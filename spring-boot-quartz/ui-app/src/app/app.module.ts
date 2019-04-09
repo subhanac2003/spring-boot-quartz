@@ -8,11 +8,8 @@ import { appRoutes }                from './app.routes';
 import { SchedulerModule } from './scheduler/scheduler.module';
 
 import 'rxjs/add/operator/map'
-
 @NgModule({
-    //put all your modules here
-    //The imports key in the context of an @NgModule defines additional modules 
-    //that will be imported into the current module
+
     imports: [ 
 		BrowserModule,
 	    SchedulerModule,
@@ -21,12 +18,11 @@ import 'rxjs/add/operator/map'
 			useHash: true
 		})
 	],
-    // put all your components / directives / pipes here
     declarations:[
         AppComponent
     ],
 
-    // put all your services here
+
     providers: [
       {provide: LocationStrategy, useClass: HashLocationStrategy}
     ],

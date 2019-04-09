@@ -1,8 +1,20 @@
+
+<nav class="navbar navbar-default">
+    <div class="container-fluid" style="background-color: #337ab7;">
+        <div class="navbar-header">
+            <a class="navbar-brand">AWS SCHEDULER</a>
+        </div>
+        <ul class="nav navbar-nav pull-right">
+            <li><a>System : Delta one</a></li>
+        </ul>
+    </div>
+</nav>
 <div class="container">
 
-    <div class="page-header">
-        <h2>AWS Scheduler</h2>
-    </div>
+<!--    <div class="page-header">-->
+<!--        <h2>AWS Scheduler</h2>-->
+<!--    </div>-->
+
     <form [formGroup]="schedulerForm" novalidate autocomplete="off">
     <div class="panel panel-primary">
         <div class="panel-heading">Job Details</div>
@@ -141,6 +153,30 @@
                     </select>
 
                 </div>
+
+                <div class="col-md-1">
+
+                </div>
+
+                <div class="col-md-1">
+                    <span>TimeZone:</span>
+                    <select class="form-control" id="timezone" formControlName="timezone" (change)="timeZone($event.target.value)">
+                        <option value=""></option>
+                        <option value="HKT">HKT</option>
+                        <option value="GMT">GMT</option>
+                        <option value="EST">EST</option>
+                    </select>
+
+                </div>
+
+                <div class="col-md-3"></div>
+                <div class="col-md-3">
+                    <span>Holiday List:</span>
+                    <select class="form-control" (change)="holidaySelected($event.target.value)">
+                        <option *ngFor="let obj of holidayList" [value]="obj.date">{{obj.title}}</option>
+                    </select>
+
+                </div>
             </div>
             <div class="m-3 ml-4">
                 <span> <b>If Cron expression is blank then it will be treated as One time job</b></span>
@@ -244,7 +280,7 @@
 
         </div>
     </div>
-
+\
 </div>
 
 <br><br>

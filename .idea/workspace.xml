@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="5db118b3-82d8-4e88-ad64-52ce21c6b17b" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/spring-boot-quartz/ui-app/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/spring-boot-quartz/ui-app/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-boot-quartz/ui-app/src/app/app.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/spring-boot-quartz/ui-app/src/app/app.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-boot-quartz/ui-app/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/spring-boot-quartz/ui-app/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-boot-quartz/ui-app/src/app/scheduler/scheduler.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/spring-boot-quartz/ui-app/src/app/scheduler/scheduler.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-boot-quartz/ui-app/src/app/scheduler/scheduler.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/spring-boot-quartz/ui-app/src/app/scheduler/scheduler.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-boot-quartz/ui-app/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/spring-boot-quartz/ui-app/src/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-boot-quartz/ui-app/typings/globals/bootstrap/index.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/spring-boot-quartz/ui-app/typings/globals/bootstrap/index.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-boot-quartz/ui-app/typings/globals/bootstrap/typings.json" beforeDir="false" afterPath="$PROJECT_DIR$/spring-boot-quartz/ui-app/typings/globals/bootstrap/typings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-boot-quartz/ui-app/typings/globals/core-js/index.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/spring-boot-quartz/ui-app/typings/globals/core-js/index.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-boot-quartz/ui-app/typings/globals/core-js/typings.json" beforeDir="false" afterPath="$PROJECT_DIR$/spring-boot-quartz/ui-app/typings/globals/core-js/typings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-boot-quartz/ui-app/typings/index.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/spring-boot-quartz/ui-app/typings/index.d.ts" afterDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/.tmp/" />
+    <ignored path="$PROJECT_DIR$/temp/" />
+    <ignored path="$PROJECT_DIR$/tmp/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/spring-boot-quartz/ui-app/src/app/app.component.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="51">
+              <caret line="3" selection-start-line="3" selection-end-line="3" />
+              <folding>
+                <element signature="e#0#49#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/spring-boot-quartz/ui-app/package-lock.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="167">
+              <caret line="4327" column="23" selection-start-line="4327" selection-start-column="18" selection-end-line="4327" selection-end-column="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/spring-boot-quartz/ui-app/src/app/app.module.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="336">
+              <caret line="25" column="16" selection-start-line="25" selection-start-column="16" selection-end-line="25" selection-end-column="16" />
+              <folding>
+                <element signature="e#0#57#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/spring-boot-quartz/ui-app/src/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="14" selection-start-line="14" selection-end-line="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/spring-boot-quartz/ui-app/webpack.config.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="38" column="4" selection-start-line="38" selection-start-column="4" selection-end-line="38" selection-end-column="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/spring-boot-quartz/ui-app/src/app/scheduler/scheduler.component.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="162" column="61" selection-start-line="162" selection-start-column="61" selection-end-line="162" selection-end-column="61" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#nav#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/spring-boot-quartz/ui-app/src/app/scheduler/scheduler.component.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="134">
+              <caret line="61" column="14" selection-start-line="61" selection-start-column="14" selection-end-line="61" selection-end-column="14" />
+              <folding>
+                <element signature="e#0#70#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/spring-boot-quartz/ui-app/package.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="171">
+              <caret line="37" column="36" lean-forward="true" selection-start-line="37" selection-start-column="36" selection-end-line="37" selection-end-column="36" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/spring-boot-quartz/ui-app/src/app/app.component.css">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>alert</find>
+      <find>337ab7</find>
+      <find>#337ab7</find>
+      <find>back</find>
+      <find>style</find>
+      <find>background</find>
+      <find>c</find>
+      <find>Select Sample Cron :</find>
+      <find>year</find>
+      <find>timezone</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>console.log</replace>
+      <replace>#00395d</replace>
+    </replaceStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/spring-boot-quartz/ui-app/src/app/app.module.ts" />
+        <option value="$PROJECT_DIR$/spring-boot-quartz/ui-app/src/app/app.component.css" />
+        <option value="$PROJECT_DIR$/spring-boot-quartz/ui-app/src/app/app.component.ts" />
+        <option value="$PROJECT_DIR$/spring-boot-quartz/ui-app/src/index.html" />
+        <option value="$PROJECT_DIR$/spring-boot-quartz/ui-app/src/app/scheduler/scheduler.component.html" />
+        <option value="$PROJECT_DIR$/spring-boot-quartz/ui-app/src/app/scheduler/scheduler.component.ts" />
+        <option value="$PROJECT_DIR$/spring-boot-quartz/ui-app/package.json" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectConfigurationFiles">
+    <option name="files">
+      <list>
+        <option value="$PROJECT_DIR$/.idea/spring-boot-quartz.iml" />
+        <option value="$PROJECT_DIR$/.idea/misc.xml" />
+        <option value="$PROJECT_DIR$/.idea/modules.xml" />
+        <option value="$PROJECT_DIR$/.idea/vcs.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="10" />
+    <option name="y" value="20" />
+    <option name="width" value="1339" />
+    <option name="height" value="698" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="spring-boot-quartz" type="b2602c69:ProjectViewProjectNode" />
+              <item name="spring-boot-quartz" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="spring-boot-quartz" type="b2602c69:ProjectViewProjectNode" />
+              <item name="spring-boot-quartz" type="462c0819:PsiDirectoryNode" />
+              <item name="spring-boot-quartz" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="spring-boot-quartz" type="b2602c69:ProjectViewProjectNode" />
+              <item name="spring-boot-quartz" type="462c0819:PsiDirectoryNode" />
+              <item name="spring-boot-quartz" type="462c0819:PsiDirectoryNode" />
+              <item name="ui-app" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="spring-boot-quartz" type="b2602c69:ProjectViewProjectNode" />
+              <item name="spring-boot-quartz" type="462c0819:PsiDirectoryNode" />
+              <item name="spring-boot-quartz" type="462c0819:PsiDirectoryNode" />
+              <item name="ui-app" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="spring-boot-quartz" type="b2602c69:ProjectViewProjectNode" />
+              <item name="spring-boot-quartz" type="462c0819:PsiDirectoryNode" />
+              <item name="spring-boot-quartz" type="462c0819:PsiDirectoryNode" />
+              <item name="ui-app" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="spring-boot-quartz" type="b2602c69:ProjectViewProjectNode" />
+              <item name="spring-boot-quartz" type="462c0819:PsiDirectoryNode" />
+              <item name="spring-boot-quartz" type="462c0819:PsiDirectoryNode" />
+              <item name="ui-app" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="scheduler" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="ts.external.directory.path" value="C:\Users\Sachin\Videos\spring-boot-quartz\spring-boot-quartz\ui-app\node_modules\typescript\lib" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="5db118b3-82d8-4e88-ad64-52ce21c6b17b" name="Default Changelist" comment="" />
+      <created>1554782991935</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1554782991935</updated>
+      <workItem from="1554782994793" duration="11325000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="11325000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Favorites" side_tool="true" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="TypeScript" />
+      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" />
+      <window_info anchor="bottom" id="Terminal" />
+      <window_info anchor="bottom" id="Event Log" side_tool="true" visible="true" weight="0.32941177" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/spring-boot-quartz/ui-app/package-lock.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="167">
+          <caret line="4327" column="23" selection-start-line="4327" selection-start-column="18" selection-end-line="4327" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spring-boot-quartz/ui-app/src/app/app.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="25" column="16" selection-start-line="25" selection-start-column="16" selection-end-line="25" selection-end-column="16" />
+          <folding>
+            <element signature="e#0#57#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spring-boot-quartz/ui-app/src/app/app.component.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spring-boot-quartz/ui-app/src/app/app.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+          <folding>
+            <element signature="e#0#49#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spring-boot-quartz/ui-app/src/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spring-boot-quartz/ui-app/webpack.config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="38" column="4" selection-start-line="38" selection-start-column="4" selection-end-line="38" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spring-boot-quartz/ui-app/src/app/scheduler/scheduler.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="162" column="61" selection-start-line="162" selection-start-column="61" selection-end-line="162" selection-end-column="61" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#nav#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spring-boot-quartz/ui-app/src/app/scheduler/scheduler.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="134">
+          <caret line="61" column="14" selection-start-line="61" selection-start-column="14" selection-end-line="61" selection-end-column="14" />
+          <folding>
+            <element signature="e#0#70#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spring-boot-quartz/ui-app/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="37" column="36" lean-forward="true" selection-start-line="37" selection-start-column="36" selection-end-line="37" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
