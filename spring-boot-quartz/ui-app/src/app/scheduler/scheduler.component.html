@@ -1,8 +1,15 @@
 
 <nav class="navbar navbar-default">
-    <div class="container-fluid" style="background-color: #337ab7;">
-        <div class="navbar-header">
-            <a class="navbar-brand">AWS SCHEDULER</a>
+
+    <div class="container-fluid" style="background-color: #00395d;">
+        <a class="navbar-brand text-white" href="#">
+
+            <img src="../../assets/barclays.png" alt="Logo" style="width:150px;" class="filter">
+
+
+        </a>
+        <div class="navbar-header ml-3">
+            <a class="navbar-brand">AWS INSTANCE MANAGER </a>
         </div>
         <ul class="nav navbar-nav pull-right">
             <li><a>System : Delta one</a></li>
@@ -162,9 +169,10 @@
                     <span>TimeZone:</span>
                     <select class="form-control" id="timezone" formControlName="timezone" (change)="timeZone($event.target.value)">
                         <option value=""></option>
-                        <option value="HKT">HKT</option>
-                        <option value="GMT">GMT</option>
+                        <option value="IST">IST</option>
                         <option value="EST">EST</option>
+                        <option value="GMT">GMT</option>
+                        <option value="HKT">JST</option>
                     </select>
 
                 </div>

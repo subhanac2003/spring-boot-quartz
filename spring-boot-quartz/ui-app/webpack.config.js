@@ -49,6 +49,8 @@ module.exports = {
         environment: JSON.stringify(process.env.APP_ENVIRONMENT || 'development')
       }
     }),
+    new CopyWebpackPlugin([ { from: 'src/assets', to: 'assets' } ]),
+
     new ExtractTextPlugin('[name].css'),
 	new webpack.ProvidePlugin({
 		$: 'jquery',

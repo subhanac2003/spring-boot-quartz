@@ -4,11 +4,12 @@ import {Router} from "@angular/router";
 import {SchedulerService} from './scheduler.service';
 import {ServerResponseCode} from './response.code.constants';
 import {Observable, Subscription} from 'rxjs/Rx';
+import {Holidays} from "./scheduler.model";
 
 
 @Component({
     template: require('./scheduler.component.html'),
-    styles: ['.navbar-default a { color: white !important; }  select{padding: 7px; display: inline-block; /* font-weight: 400; */ color: #fff !important; background-color: #337ab7 !important; border-color: #337ab7; /* color: #212529; */ text-align: center; vertical-align: middle; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; background-color: transparent; border: 1px solid transparent; /* padding: .375rem .75rem; */ /* font-size: 1rem; */ line-height: 1.5; border-radius: 7px; transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out; }'],
+    styles: ['.panel-primary > .panel-heading { color: #fff; background-color: #00395d !important; border-color: #00395d !important; } .container-fluid {background-color: #00395d;} .navbar-default a { color: white !important; }  select{padding: 7px; display: inline-block; /* font-weight: 400; */ color: #fff !important; background-color: #00395d !important; border-color: #00395d; /* color: #212529; */ text-align: center; vertical-align: middle; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; background-color: transparent; border: 1px solid transparent; /* padding: .375rem .75rem; */ /* font-size: 1rem; */ line-height: 1.5; border-radius: 7px; transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out; }'],
 })
 
 export class SchedulerComponent implements OnInit, OnDestroy {
@@ -23,60 +24,15 @@ export class SchedulerComponent implements OnInit, OnDestroy {
     defaultInstance: any = 'EC2';
     filteredInstances = [];
     isEditMode: boolean = false;
-    staticDataTimeZone: any =
-        {
-            "IST": [
-                {
-                    "title": "",
-                    "date": "",
-                },
-                {
-                    "title": "New Year’s Day",
-                    "date": "2019-01-02"
-                },
-                {
-                    "title": "Coonation",
-                    "date": "2019-01-02"
-                }
-            ],
-
-            "EST": [
-                {
-                    "title": "",
-                    "date": "",
-                },
-                {
-                    "title": "Good Friday",
-                    "date": "2019-04-06"
-                }
-            ],
-            "GMT": [
-                {
-                    "title": "",
-                    "date": "",
-                },
-                {
-                    "title": "Good Friday",
-                    "date": "2019-04-06"
-                }
-            ],
-            "JST": [
-                {
-                    "title": "",
-                    "date": "",
-                },
-                {
-                    "title": "Good DAYY",
-                    "date": "2019-04-06"
-                }
-            ]
-        }
+     holidays = new Holidays();
+    staticDataTimeZone: any;
     holidayList: any;
 
     constructor(private _router: Router,
                 private _fb: FormBuilder,
                 private _schedulerService: SchedulerService,
                 private _responseCode: ServerResponseCode) {
+        this.staticDataTimeZone=this.holidays.staticDataTimeZone;
     }
 
     ngOnInit() {
